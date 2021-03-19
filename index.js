@@ -1,5 +1,5 @@
 //Get container
-let oracion = document.getElementById('oracion')
+let sentence = document.getElementById('sentence')
 
 //Sentences
 let who = ['The dog','My grandma','His turtle','My bird'];
@@ -18,6 +18,7 @@ const getSentence = (arr) => {
     //         result = sentence
     //     }
     // })
+
     for (let i = 0; i < arr.length; i++){
         if (i === random) {
             result = arr[i];
@@ -31,7 +32,7 @@ const getSentence = (arr) => {
 
 const createSentence = (who, action, what, when) => {
     let result = `${who} ${action} ${what} ${when}`
-    return oracion.innerHTML = `<h2>${result}</h2>`
+    return sentence.innerHTML = `<h2>${result}</h2>`
 }
 
 createSentence(getSentence(who), getSentence(action), getSentence(what), getSentence(when))
