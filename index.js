@@ -13,13 +13,19 @@ let when = ['before the class', 'right on time', 'when I finished', 'during my l
 const getSentence = (arr) => {
     let result;
     let random = Math.floor(Math.random() * arr.length)
-    arr.forEach((sentence, i) => {
+    // arr.forEach((sentence, i) => {
+    //     if (i === random) {
+    //         result = sentence
+    //     }
+    // })
+    for (let i = 0; i < arr.length; i++){
         if (i === random) {
-            result = sentence
+            result = arr[i];
         }
-    })
+    }
     return result
 }
+
 
 //CREATE SENTENCE
 
